@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activities.MainSellerActivity">
+    <!--Toolbar-->
+    <RelativeLayout
+        android:id="@+id/toolbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/shape_react01"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/logoutBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:src="@drawable/power_settings"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <ImageButton
+            android:id="@+id/addProductBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_toStartOf="@id/logoutBtn"
+            android:background="@null"
+            android:src="@drawable/cart"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profileTv"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/person_gray"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profileTv"
+            android:text="Tên"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/shopNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTv"
+            android:layout_toEndOf="@id/profileTv"
+            android:text="Shop"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:orientation="horizontal"
+            android:layout_below="@id/profileTv"
+            android:background="@drawable/shape_rect03"
+            android:padding="5dp">
+<!-- prodcut-->
+            <TextView
+                android:id="@+id/tabProductsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Sản phẩm"
+                android:background="@drawable/shape_rect04"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tabOrdersTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Orders"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+       android:id="@+id/productsRL"
+        android:layout_below="@+id/toolbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- SearchView -->
+        <EditText
+            android:id="@+id/searchProductEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_rect02"
+            android:drawableStart="@drawable/search_gray"
+            android:drawablePadding="10dp"
+            android:layout_toStartOf="@+id/filterProductBtn"
+            android:hint="Tìm kiếm"
+            android:minHeight="48dp"
+            android:padding="10dp" />
+        <!--    filter-->
+        <ImageButton
+            android:id="@+id/filterProductBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/filter_gray"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/filteredProductTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchProductEt"
+            android:textColor="@color/black"
+            android:text="Tất cả"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"/>
+<!--ReclyclerView: show products -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productsRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/filteredProductTv"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_product_seller"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/ordersRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+
+    <!--    orders-->
+</RelativeLayout>

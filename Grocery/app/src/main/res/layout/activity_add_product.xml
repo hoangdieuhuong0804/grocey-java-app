@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddProductActivity"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/shape_react01">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back_white"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+            android:background="@null"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Add Product"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/productTv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/shoppingcart"
+            app:civ_border_width="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            app:civ_border_color="@color/colorPrimary"
+            android:layout_centerHorizontal="true"/>
+
+
+        <EditText
+            android:id="@+id/titleEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/productTv"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_rect02"
+            android:drawableStart="@drawable/text"
+            android:hint="Tiêu đề"
+            android:inputType="textPersonName|textCapWords"
+            android:minHeight="48dp"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/descriptionEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleEt"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_rect02"
+            android:drawableStart="@drawable/text"
+            android:hint="Miêu tả"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="48dp"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/categoryTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptionEt"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_rect02"
+            android:drawableStart="@drawable/category"
+            android:drawableEnd="@drawable/down"
+            android:hint="Danh mục"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="48dp"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/quantinyEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/categoryTv"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_rect02"
+            android:drawableStart="@drawable/cart"
+            android:hint="Số lượng e.g kg. g etc."
+            android:inputType="textCapWords"
+            android:minHeight="48dp"
+            android:padding="10dp" />
+        <EditText
+            android:id="@+id/priceEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quantinyEt"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_rect02"
+            android:drawableStart="@drawable/cart"
+            android:hint="Giá"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="10dp" />
+
+<!--        Whether or not product on discount-->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/discountSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_below="@id/priceEt"
+        android:text="Giảm giá"/>
+        <EditText
+            android:id="@+id/discountedPriceEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discountSwitch"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_rect02"
+            android:drawableStart="@drawable/cart"
+            android:hint="Giá giảm giá"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="10dp" />
+        <EditText
+            android:id="@+id/discountedNoteEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discountedPriceEt"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_rect02"
+            android:drawableStart="@drawable/cart"
+            android:hint="Lưu ý giảm giá e.g. 10% Off"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="10dp" />
+        <Button
+            android:id="@+id/addProductBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/discountedNoteEt"
+            android:text="Thêm sản phẩm"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:minWidth="150dp"
+            android:layout_marginTop="5dp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

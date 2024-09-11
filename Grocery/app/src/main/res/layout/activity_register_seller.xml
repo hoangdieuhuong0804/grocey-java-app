@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.RegisterSellerActivity">
+    <!--TollBar-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="10dp"
+        android:background="@drawable/shape_react01">
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:src="@drawable/back_white"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Đăng ký"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+
+
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/iconIv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/shape_circle01"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/baseline_key_24"
+        android:padding="5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iconIv">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/nameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/person_gray"
+                android:hint="Tên"
+                android:inputType="textPersonName|textCapWords"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/shopNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameEt"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/baseline_shop_24"
+                android:hint="Shop "
+                android:inputType="textPersonName|textCapWords"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/phoneEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shopNameEt"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/local_phone"
+                android:drawablePadding="5dp"
+                android:hint="Số điện thoại"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/deliveryEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneEt"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/baseline_shopping_cart_checkout_24"
+                android:drawablePadding="5dp"
+                android:hint="Đơn vị vận chuyển"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+            <LinearLayout
+                android:id="@+id/addressLl"
+                android:layout_below="@+id/deliveryEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/countryEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nameEt"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/shape_rect02"
+                    android:drawableStart="@drawable/location_on_24"
+                    android:drawablePadding="5dp"
+                    android:hint="Quốc gia"
+                    android:inputType="textPostalAddress"
+                    android:minHeight="48dp"
+                    android:layout_weight="1"
+                    android:padding="10dp" />
+                <EditText
+                    android:id="@+id/stateEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nameEt"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/shape_rect02"
+                    android:drawableStart="@drawable/location_on_24"
+                    android:drawablePadding="5dp"
+                    android:hint="Tình trạng"
+                    android:inputType="textPostalAddress"
+                    android:minHeight="48dp"
+                    android:layout_weight="1"
+                    android:padding="10dp" />
+                <EditText
+                    android:id="@+id/cityEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nameEt"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/shape_rect02"
+                    android:drawableStart="@drawable/location_on_24"
+                    android:drawablePadding="5dp"
+                    android:hint="Thành phố"
+                    android:inputType="textPostalAddress"
+                    android:minHeight="48dp"
+                    android:layout_weight="1"
+                    android:padding="10dp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/addressEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addressLl"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/location_on_24"
+                android:drawablePadding="5dp"
+                android:hint="Địa chỉ cụ thể"
+                android:inputType="textPostalAddress"
+                android:minHeight="48dp"
+                android:layout_weight="1"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/emailEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addressEt"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/baseline_email_24"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/passwordEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailEt"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/look_gray"
+                android:hint="Mật khẩu"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/cPasswordEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/passwordEt"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape_rect02"
+                android:drawableStart="@drawable/look_gray"
+                android:hint="Xác nhận mật khẩu"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+
+
+            <Button
+                android:id="@+id/registerBtn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cPasswordEt"
+                android:layout_centerHorizontal="true"
+                android:minWidth="120dp"
+                android:textColor="@color/white"
+                android:text="Đăng ký" />
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
